@@ -1,0 +1,299 @@
+<!Doctype html>
+<html lang="en" dir="ltr">
+<head>
+<style>
+	body{
+background-color: rgb(204,255,255);
+}
+h2{
+font-size: 1.8rem;
+line-height: 0.4;
+letter-spacing: 0.4rem;
+color: red;
+margin-top: 25px;
+}
+h3{
+	color: black;
+	line-height: 0.2;
+   
+	letter-spacing: 0.4rem;
+
+}
+{
+	margin: 0;
+	padding: 0;
+	background: #331a00;
+}
+.slidershow{
+	width: 1000px;
+	height: 400px;
+	overflow: hidden;
+	color: black;
+}
+.middle{
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%,50%);
+	color: black;
+}
+.navigation{
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translate(-50%);
+	display: flex;
+	color: black;
+}
+.bar{
+	width: 80px;
+	height: 10px;
+	border: 2px solid #fff;
+	margin: 6px;
+	cursor: pointer;
+	transition: 0.4s;
+color: black;
+}
+.bar:hover{
+	background: black;
+}
+	input[name="r"]{
+		position: absolute;
+		visibility: hidden;
+	}
+	.slides{
+		width: 500%;
+		height: 100%;
+		display: flex;
+	}
+	.slide{
+		width: 40%;
+		transition: 0.6s;
+	}
+	.slide img{
+		width: 100%;
+		height: 100%;
+	}
+#r1:checked ~ .s1{
+	margin-left: 0;
+}
+#r2:checked ~ .s1{
+	margin-left: -15%;
+}
+#r3:checked ~ .s1{
+	margin-left: -30%;
+}
+#r4:checked ~ .s1{
+	margin-left: -55%;
+}
+#r5:checked ~ .s1{
+	margin-left: -68%;
+}
+#r6:checked ~ .s1{
+	margin-left: -82%;
+}
+#r7:checked ~ .s1{
+	margin-left: -100%;
+}
+#r8:checked ~ .s1{
+	margin-left: -118%;
+}
+#r9:checked ~ .s1{
+	margin-left: -138%;
+}
+#r10:checked ~ .s1{
+	margin-left: -158%;
+}
+
+</style>
+<script type="text/javascript">
+
+function printPrice() {
+  var movie = document.getElementById("movie").value;
+  var name = document.getElementById("textbox").value;
+  var Cquantity = document.getElementById("Cquantity").value * 1;
+  var Aquantity = document.getElementById("Aquantity").value * 1;
+  var total = 0;
+  var sentence = "";
+  var price = document.getElementById('Ctickets').value * Cquantity;
+
+  sentence += name + "<br>purchased "+Cquantity+" Child ticket(s) to \"";
+  sentence += movie + "\" for $";
+  sentence += price;
+  total += price;
+
+  price = document.getElementById('Atickets').value * Aquantity;
+  sentence += "<br>and "+Aquantity+" Adult ticket(s) to \"";
+  sentence += movie + "\" for $";
+  
+ntence += price +'<br>';
+  total += price;
+
+  sentence += "<br>";
+  sentence += 'Total cost: $'+total;
+  document.getElementById("inserts").innerHTML=sentence;
+}
+
+
+</script>
+</head>
+<body>
+	 <h2>Booking management system</h2>
+      <br><hr>
+      <div class="header">
+  <div class="header-logo">
+      <img src="Img/lo.png" alt="icon">
+       <span>booking management</span>
+  </div>
+<div class="header-list">
+    <ul>
+    <a href="feedback.html"><li><i class="fas fa-headset"></i>&nbsp; &nbsp;Contact us</li></a>
+    <a href="Host-a-donation-drive.html"><li><i class="fas fa-hands-helping"></i>&nbsp; &nbsp;Support Us</li></a>
+    <a href="Team.html"><li><i class="fas fa-user-alt"></i>&nbsp; &nbsp;About</li></a>
+    <a href="index.html"><li id="active"><i class="fas fa-home"></i>&nbsp; &nbsp;Home</li></a>
+    <a href="Login-page.html"><li><i class="fas fa-sign-in-alt"></i>&nbsp; &nbsp;Log In</li></a>
+    </ul>
+    <hr>
+</div>
+</div>
+<div class="slidershow middle">
+<div class="slides">
+	<input type="radio" name="r" id="r1" checked>
+	<input type="radio" name="r" id="r2">
+	<input type="radio" name="r" id="r3">
+	<input type="radio" name="r" id="r4">
+	<input type="radio" name="r" id="r5">
+	<input type="radio" name="r" id="r6">
+	<input type="radio" name="r" id="r7">
+	<input type="radio" name="r" id="r8">
+	<input type="radio" name="r" id="r9">
+	<input type="radio" name="r" id="r10">
+	
+<div class="slide s1">
+<img src="n1.jpg" alt="" width="90%" height="700px">
+</div>
+<div class="slide">
+<img src="n2.jpg" alt="" width="70%" height="700px">
+</div>
+<div class="slide">
+<img src="n3.jpg" alt="" width="70%" height="700px">
+</div>
+<div class="slide">
+<img src="n4.jpg" alt="" width="70%" height="700px">
+</div>
+<div class="slide">
+<img src="n5.jpg" alt="" width="70%" height="700px">
+</div>
+<div class="slide">
+<img src="n6.jpg" alt="" width="70%" height="700px">
+</div>
+<div class="slide">
+<img src="n7.jpg" alt="" width="70%" height="700px">
+</div>
+<div class="slide">
+<img src="n8.jpg" alt="" width="70%" height="700px">
+</div>
+<div class="slide">
+<img src="n9.jpg" alt="" width="70%" height="700px">
+</div>
+<div class="slide">
+<img src="n10.jpg" alt="" width="70%" height="700px">
+</div>
+</div>
+</div>
+<div class="navigation">
+	<label for="r1" class="bar"></label>
+	<label for="r2" class="bar"></label>
+	<label for="r3" class="bar"></label>
+	<label for="r4" class="bar"></label>
+	<label for="r5" class="bar"></label>
+	<label for="r6" class="bar"></label>
+	<label for="r7" class="bar"></label>
+	<label for="r8" class="bar"></label>
+	
+	<label for="r9" class="bar"></label>
+	<label for="r10" class="bar"></label>
+</div>
+</div>
+<div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+<br>
+<hr>
+<img src="inception12.jpg"width="29%" height="500px">
+	<a href="third.html">see more</a>
+
+<img src="k1.jpg"width="28%" height="500px">
+<a href="forth.html">click here</a> 
+
+<img src="o1.jpg"width="28%" height="500px">
+<a href="fivth.html">click here</a>
+<hr>
+<br><br>
+<div> <b><h3>Choose a Cinema:</h3></b> 
+<td>
+<select>
+<option>CINEMA'S</option>
+<option>Rebsal Cinema</option>
+<option>PVR Cinema</option>
+<option>Maratha Mandir Theatre</option>
+<option>PVR Icon-Oberoi</option>
+<option>INOX-R City</option>
+<option>Carnival Cinema</option>
+</select>
+</td>
+<br><br><br>
+<div> <b><h3>Choose timing:</h3></b> 
+<td>
+<select>
+  
+<option>TIMING</option>
+<option>8:00 a.m-11:00 a.m</option>
+<option>11:00 am-2:00 p.m</option>
+<option>2:00 p.m-5:00 p.m</option>
+<option>5:00 p.m-8:00 p.m</option>
+<option>8:00 p.m-11:00 p.m</option>
+<option>11:00 p.m-2:00 a.m</option>
+
+</select>
+</td>
+</div>
+<br>
+<form name="form1">
+<br>
+<div> <b><h3>Choose a movie:</h3></b> 
+<select name="movie" id="movie">
+ <option value="">Select Movie</option>
+ <option value="INCEPTION">INCEPTION</option>
+ <option value="The Lord of the rings">The Lord of the rings</option>
+ <option value="INTERSTELLAR">INTERSTELLAR</option>
+</select>
+</div>
+
+<div><br>
+<b><h3> Name:</h3></b>
+ <input type="text" name="textbox" id="textbox" value="" />
+</div>
+
+<div>
+ <label> <input type="checkbox" id="Ctickets" value="3" checked />Child tickets: </label>
+ How many: <input type="text" id="Cquantity" value="1" size="3" />
+ <br>
+ <label> <input type="checkbox" id="Atickets" value="8" checked />Adult tickets: </label>
+ How many: <input type="text" id="Aquantity" value="1" size="3" />
+
+ <p><input type="button" value="Purchase" onclick="printPrice()" />
+
+</div>
+
+
+</form>
+<div id="inserts"> </div>
+
+
+</body>
+</html>
+
+
+
+
